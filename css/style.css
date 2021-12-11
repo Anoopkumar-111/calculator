@@ -1,0 +1,193 @@
+body{
+    background-color: black;
+}
+
+#container{
+    width: 80%;
+    height:80vh;
+    /* background:url('../images/bg1.jpg'); */
+
+    /* For linear gradient  rgba */
+
+    background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('../images/bg1.jpg');
+
+    
+    /* top bottom margin 20px and left right auto(center) */
+    margin:20px auto;
+}
+
+#calculator{
+    width: 320px;
+    height:520px;
+    background-color: rgb(204, 204, 204);
+
+    /* center horizontally */
+    margin: 0 auto;
+
+    top:5px;
+    position: relative;
+
+
+    border-radius: 9px;
+
+
+    /* Inspect shadow paramet X Y Blur spread */
+    box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.2) ;
+}
+
+
+#result{
+    height: 120px;
+}
+
+#keyboard{
+    height: 400px;
+}
+
+#history{
+    text-align: right;
+    height: 20px;
+    margin: 0 20px;
+    padding-top: 20px;
+    font-size: 15px;
+    color: #919191;
+}
+
+#output{
+    text-align: right;
+    height: 60px;
+    margin: 10px 20px;
+    font-size: 30px;
+}
+
+#keyboard{
+    height: 400px;
+}
+
+.operator,.number,.empty{
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+    float: left;
+
+    /* circular button */
+    border-radius: 50%;
+
+    border-width: 0;
+
+    font-weight: bold;
+    font-size: 15px;
+    
+}
+
+.number,.empty{
+    background-color:  rgb(204, 204, 204);
+}
+
+.number,.operator{
+    cursor:pointer
+}
+
+.operator:active ,.number:active{
+    font-size: 18px;
+}
+
+
+/* targeting 4th button -> that is a operator */
+button:nth-child(4){
+    font-size: 25px;
+    background-color: rgb(172, 235, 0)
+}
+button:nth-child(8){
+    font-size: 35px;
+    background-color: rgb(163, 126, 233)
+}
+button:nth-child(12){
+    font-size: 25px;
+    background-color: rgb(206, 41, 118)
+}
+button:nth-child(16){
+    font-size: 25px;
+    background-color: rgb(233, 105, 0)
+}
+button:nth-child(20){
+    font-size: 25px;
+    background-color: rgb(23, 211, 6)
+}
+
+
+@media screen and (max-width: 420px) {
+    #container{
+        width: 90%;
+        height:90vh;
+        /* margin:10px auto; */
+        margin :auto;
+    }
+    #calculator{
+        width: 90%;
+        height:80vh;
+        top:5vh;
+        position: relative;
+
+        margin: auto;
+
+        border-radius: 9px;
+    }
+
+    .operator,.number,.empty{
+        width: 15%;
+        height: 7.5vh;
+        /* margin: 15px; */
+        margin: 0.82rem 0.7rem;
+        float: center;
+    
+        /* circular button */
+        border-radius: 50%;
+    
+        border-width: 0;
+    
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    button:nth-child(4n+4){
+        font-size: 22px;
+    }
+    #result{
+        height: 22vh;
+    }
+    
+    #keyboard{
+        display: block;
+        height: 70vh;
+        margin :auto;
+    }
+    
+    #history{
+        text-align: right;
+        height: 15px;
+        margin: 0 25px;
+        padding-top: 10px;
+        font-size: 12px;
+    }
+    
+    #output{
+        text-align: right;
+        height: 40px;
+        margin: 5px 10px;
+        font-size: 20px;
+    }
+    
+    
+  }
+
+  @media screen and (max-width: 300px) {
+    .operator,.number,.empty{
+        width: 15%;
+        height: 7.5vh;
+        /* margin: 15px; */
+        margin: 0.7rem 0.6rem;
+  }
+}
+
+  
